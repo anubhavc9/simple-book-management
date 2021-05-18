@@ -1,10 +1,5 @@
 console.log("This is Library Website - Prototype Version");
 
-/* Further improvements:
-    1. store all the data to local storage
-    2. give an option to delete a book
-    3. add a scroll bar to the page */
-
 // Constructor
 function Book(name, author, type){
     this.name = name;

@@ -1,8 +1,8 @@
-console.log("This is ES6 classes version");
+console.log("This is ES6 classes version, with all further improvements");
 
 /* Further improvements:
     1. store all the data to local storage
-    2. give an option to delete a book. try to resize the button.
+    2. give an option to delete a book.
     3. add a scroll bar to the page 
     4. add a background image
     5. change text color etc in a separate CSS file
@@ -27,7 +27,7 @@ class Display{
                             <td>${book.name}</td>
                             <td>${book.author}</td>
                             <td>${book.type}</td>
-                            <td><button type="button" class="btn btn-danger" style="font-size: 12px;">Delete</button></td>
+                            <td><button type="button" id=${index} onclick="deleteBook(this.id)" class="btn btn-danger" style="font-size: 12px;">Delete</button></td>
                         </tr>`;
 
         tableBody.innerHTML += uiString;
@@ -144,9 +144,6 @@ if (library == null) {
 } else {
     libraryObj = JSON.parse(library); // converting the "library" string into an array
 }
-
-console.log("libraryObj = ")
-console.log(libraryObj);
 
 let html = "";
 libraryObj.forEach(function (element) {
